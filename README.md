@@ -2,6 +2,7 @@
 
 **Version:** 1.0\
 **Owner:** [Ahmed Amin](https://github.com/ahmedamin)
+
 **Applies to:** All new frontend projects (Next.js / React / TypeScript)
 
 ------------------------------------------------------------------------
