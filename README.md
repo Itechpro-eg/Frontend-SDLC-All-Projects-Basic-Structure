@@ -1,6 +1,4 @@
-# Itechpro frontend SDLC + Basic folder structure
-
-# **HMCV Frontend Architecture & Project Structure Standard**
+# **Itechpro HMCV Frontend Architecture & Project Structure Standard**
 
 **Version:** 1.0\
 **Owner:** Frontend Team Lead\
