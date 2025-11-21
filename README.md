@@ -1,4 +1,4 @@
-# Frontend-SDLC-All-Projects-Basic-Structure
+# Itechpro frontend SDLC + Basic folder structure
 
 # **HMCV Frontend Architecture & Project Structure Standard**
 
