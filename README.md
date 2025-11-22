@@ -118,7 +118,7 @@ PR Checklist: - Follows HMCV structure\
 
 # **3. Project Folder Structure (Root-Level)**
 
-   /project-name
+   /project-name\
 ├─ /src\
 │  ├─ /global\
 │  │  ├─ routes.ts                # global routes object (exported)\
