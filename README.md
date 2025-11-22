@@ -118,27 +118,43 @@ PR Checklist: - Follows HMCV structure\
 
 # **3. Project Folder Structure (Root-Level)**
 
-    /src
-    ââ /global
-    â  ââ routes.ts
-    â  ââ selectMenus/
-    â  â  ââ countrySelect.ts
-    â  â  ââ educationLevelSelect.ts
-    â  ââ utils/
-    â  â  ââ fetch.ts
-    â  â  ââ loading.ts
-    â  â  ââ validators.ts
-    â  ââ ui/
-    â  ââ hooks/
-    ââ /modules
-    â  ââ /<ModuleName>/
-    â  â  ââ components/
-    â  â  ââ views/
-    â  â  ââ logic/
-    â  â  ââ types/
-    â  â  ââ container.tsx
-    ââ /pages (or /app)
-    ââ main.tsx
+   /project-name
+├─ /src
+│  ├─ /global
+│  │  ├─ routes.ts                # global routes object (exported)
+│  │  ├─ selectMenus/             # select menus (one file per select menu)
+│  │  │  ├─ countrySelect.ts
+│  │  │  └─ educationLevelSelect.ts
+│  │  ├─ utils/
+│  │  │  ├─ fetch.ts              # HttpClient (must be imported by logic files)
+│  │  │  ├─ loading.ts            # global loading / spinner utilities
+│  │  │  └─ validators.ts
+│  │  ├─ ui/                      # shared UI primitives, tokens
+│  │  └─ hooks/                   # global hooks
+│  ├─ /modules
+│  │  ├─ /<ModuleName>            # e.g., Users, Hotels, Courses
+│  │  │  ├─ components/           # module-private small components
+│  │  │  │  └─ CardHeader.tsx
+│  │  │  ├─ views/                # view pages used by routes (presentational)
+│  │  │  │  └─ ListView.tsx
+│  │  │  ├─ logic/                # logic files (one function per file)
+│  │  │  │  ├─ getAll.ts
+│  │  │  │  ├─ create.ts
+│  │  │  │  ├─ update.ts
+│  │  │  │  └─ delete.ts
+│  │  │  ├─ types/                # TS interfaces and types specific to module
+│  │  │  │  └─ index.ts
+│  │  │  ├─ container.tsx         # composes logic & view, exports default container
+│  │  │  └─ index.ts               # re-exports public module parts (optional)
+│  ├─ /pages (or /app)            # depending on Next.js routing approach
+│  └─ main.tsx                    # root app file
+├─ /public
+├─ /scripts
+├─ jest.config.js
+├─ .eslintrc.js
+├─ tsconfig.json
+└─ package.json
+
 
 ------------------------------------------------------------------------
 
@@ -269,9 +285,17 @@ PR must pass linting, typecheck, tests, and build.
 
 # **16. Example Module Structure**
 
-    modules/Users/
-    ââ components/
-    ââ views/
-    ââ logic/
-    ââ types/
-    ââ container.tsx
+modules/Users/
+├─ components/
+│  └─ UserCard.tsx
+├─ views/
+│  └─ ListView.tsx
+├─ logic/
+│  ├─ getAll.ts
+│  ├─ create.ts
+│  └─ update.ts
+├─ types/
+│  └─ index.ts
+└─ container.tsx
+
+
